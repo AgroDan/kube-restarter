@@ -1,0 +1,32 @@
+image:
+  repository: kube-restarter
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+
+checkInterval: 60
+# Watch all namespaces by default. Set to a specific namespace to restrict scope.
+namespace: ""
+
+replicaCount: 1
+
+serviceAccount:
+  create: true
+  name: ""
+  annotations: {}
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 32Mi
+  limits:
+    cpu: 100m
+    memory: 64Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+podAnnotations: {}
+podLabels: {}

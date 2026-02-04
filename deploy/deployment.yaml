@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-restarter
+  namespace: kube-system
+  labels:
+    app: kube-restarter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-restarter
+  template:
+    metadata:
+      labels:
+        app: kube-restarter
+    spec:
+      serviceAccountName: kube-restarter
+      containers:
+        - name: kube-restarter
+          image: kube-restarter:latest
+          env:
+            - name: CHECK_INTERVAL
+              value: "60"
+            - name: NAMESPACE
+              value: ""
+          resources:
+            requests:
+              cpu: 10m
+              memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 64Mi
