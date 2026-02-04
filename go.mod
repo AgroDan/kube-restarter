@@ -1,4 +1,4 @@
-module github.com/example/kube-restarter
+module github.com/AgroDan/kube-restarter
 
 go 1.22.0
 

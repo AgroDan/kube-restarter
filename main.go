@@ -7,14 +7,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/example/kube-restarter/pkg/controller"
+	"github.com/AgroDan/kube-restarter/pkg/controller"
 
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 )
 
 func main() {
-	interval := 60
+	interval := 21600
 	if v := os.Getenv("CHECK_INTERVAL"); v != "" {
 		n, err := strconv.Atoi(v)
 		if err != nil {

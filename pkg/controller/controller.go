@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/example/kube-restarter/pkg/registry"
+	"github.com/AgroDan/kube-restarter/pkg/registry"
 
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
