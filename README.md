@@ -71,3 +71,11 @@ An example is provided in `deploy/example.yaml`.
 ```bash
 docker build -t kube-restarter:latest .
 ```
+
+## Dan's Note
+
+This application is shamelessly vibe-coded. This should not really be used for production anything in kubernetes, as I built this mostly for homelab use since there doesn't exist anything similar to WatchTower's "hands-off automation" method for keeping images up to date.
+
+### TODO
+- Automated builds deployed to ghcr
+- Proper logging
