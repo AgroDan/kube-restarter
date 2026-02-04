@@ -4,7 +4,7 @@ A WatchTower-style pod updater for Kubernetes. Watches for Deployments using `la
 
 ## How It Works
 
-kube-restarter runs as a Deployment inside your cluster and polls on a configurable interval (default 60s). Each cycle it:
+kube-restarter runs as a Deployment inside your cluster and polls on a configurable interval (default 6 hours). Each cycle it:
 
 1. Lists all Deployments annotated with `kube-restarter.io/enabled: "true"`
 2. For each matching Deployment, finds containers using the `latest` tag with `imagePullPolicy: Always`
@@ -18,7 +18,7 @@ Registry auth is handled via `imagePullSecrets` on the pod spec. Public images u
 
 | Environment Variable | Default | Description |
 |---|---|---|
-| `CHECK_INTERVAL` | `60` | Seconds between reconciliation loops |
+| `CHECK_INTERVAL` | `21600` | Seconds between reconciliation loops |
 | `NAMESPACE` | `""` (all) | Restrict to a specific namespace |
 
 ## Installation
