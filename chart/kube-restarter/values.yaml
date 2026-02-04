@@ -1,11 +1,12 @@
 image:
-  repository: kube-restarter
+  repository: ghcr.io/AgroDan/kube-restarter
   tag: latest
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
 
-checkInterval: 60
+# 6 hour check interval by default, otherwise set in seconds here
+checkInterval: 21600
 # Watch all namespaces by default. Set to a specific namespace to restrict scope.
 namespace: ""
 
