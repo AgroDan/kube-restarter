@@ -1,5 +1,5 @@
 image:
-  repository: ghcr.io/AgroDan/kube-restarter
+  repository: ghcr.io/agrodan/kube-restarter
   tag: latest
   pullPolicy: IfNotPresent
 
